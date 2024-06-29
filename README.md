@@ -64,7 +64,7 @@ distributions based on Debian 11 Bullseye. Read the notes further down below in 
 * **Step 1:** \
 To download this script, it is necessary to have git installed. If you don't have git already installed, or if you are unsure, run the following command:
 ```shell
-sudo apt-get update && sudo apt-get install git -y
+sudo dnf update && sudo dnf install git -y
 ```
 
 * **Step 2:** \

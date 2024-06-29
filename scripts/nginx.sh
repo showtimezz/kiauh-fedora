@@ -25,7 +25,7 @@ function remove_nginx() {
     fi
 
     status_msg "Removing NGINX from system ..."
-    if sudo apt-get remove nginx -y && sudo update-rc.d -f nginx remove; then
+    if sudo dnf remove nginx -y && sudo update-rc.d -f nginx remove; then
       ok_msg "NGINX removed!"
     else
       error_msg "Removing NGINX from system failed!"
@@ -171,7 +171,7 @@ function remove_conflicting_packages() {
 
   if [[ ${apache} == "true" ]]; then
     status_msg "Removing Apache2 from system ..."
-    if sudo apt-get remove apache2 -y && sudo update-rc.d -f apache2 remove; then
+    if sudo dnf remove apache2 -y && sudo update-rc.d -f apache2 remove; then
       ok_msg "Apache2 removed!"
     else
       error_msg "Removing Apache2 from system failed!"
@@ -180,7 +180,7 @@ function remove_conflicting_packages() {
 
   if [[ ${haproxy} == "true" ]]; then
     status_msg "Removing haproxy from system ..."
-    if sudo apt-get remove haproxy -y && sudo update-rc.d -f haproxy remove; then
+    if sudo dnf remove haproxy -y && sudo update-rc.d -f haproxy remove; then
       ok_msg "Haproxy removed!"
     else
       error_msg "Removing Haproxy from system failed!"
